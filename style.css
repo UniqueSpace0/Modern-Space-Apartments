@@ -1,0 +1,249 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #212121;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #123456;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ffcc00;
+    outline: none;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #123456;
+}
+
+/* Apartment grid styles */
+.apartment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.apartment-item {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.apartment-item:hover,
+.apartment-item:focus-within {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apartment-images {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #123456 #e1e1e1;
+}
+
+.apartment-images::-webkit-scrollbar {
+    height: 8px;
+}
+
+.apartment-images::-webkit-scrollbar-track {
+    background: #e1e1e1;
+}
+
+.apartment-images::-webkit-scrollbar-thumb {
+    background-color: #123456;
+    border-radius: 4px;
+}
+
+.apartment-images img {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    scroll-snap-align: start;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+h3 {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: #212121;
+}
+
+.short-description {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.view-details {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #123456;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-details:hover,
+.view-details:focus {
+    background-color: #212121;
+    outline: none;
+}
+
+.full-details {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    font-size: 0.9rem;
+    border-top: 1px solid #e1e1e1;
+}
+
+.full-details p,
+.full-details h4,
+.full-details ul {
+    margin-bottom: 0.5rem;
+}
+
+.full-details ul {
+    padding-left: 1.5rem;
+}
+
+/* Apply section styles */
+#apply {
+    background-color: #f0f0f0;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#apply h2 {
+    color: #123456;
+    margin-bottom: 1rem;
+}
+
+.apply-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #123456;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-link:hover,
+.apply-link:focus {
+    background-color: #212121;
+    outline: none;
+}
+
+/* Contact form styles */
+#contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #123456;
+}
+
+button[type="submit"] {
+    padding: 0.75rem;
+    background-color: #123456;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #212121;
+    outline: none;
+}
+
+/* Footer styles */
+footer {
+    background-color: #123456;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .apartment-grid {
+        grid-template-columns: 1fr;
+    }
+}
